@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Chronological Diagram</title>
+    <script type="module" src="javascript/arrow.js"></script>
+    <script type="module" src="javascript/diagram.js"></script>
+    <script type="module" src="javascript/excel_reader.js"></script>
+    <script type="module" src="javascript/canvas.js"></script>
+    <script type="module" src="javascript/render.js"></script>
+    <!-- CDN上のファイルを参照 -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-grid@latest/dist/js/splide-extension-grid.min.js"></script>
+    <script type="module" src="javascript/myslider.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--for excel-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.11.1/xlsx.full.min.js"></script>
+
+</head>
+
+<body>
+  <!-- Main Splide -->
+  <section id="main-carousel" class="splide">
+    <div class="splide__track">
+      <ul class="splide__list" id="myslider">
+
+      </ul>
+    </div>
+    <div class="splide__progress">
+      <div class="splide__progress__bar">
+      </div>
+    </div>
+    <button class="splide__toggle" type="button">
+      <span class="splide__toggle__play">play</span>
+      <span class="splide__toggle__pause">pause</span>
+    </button>
+    <a href="readme.html">入力形式説明書</a>
+  </section>
+  <form action="" method="get">
+    <input type="file" name="upload_file" id="import-excel" multiple accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+    <div id="result"></div>
+  </form>
+  
+  <!-- thumbnail Splide -->
+  <section id="thumbnail-carousel" class="splide" aria-label="サムネイルスライダー。各サムネイルをクリックすると、メインのスライダーが切り替わります">
+    <div class="splide__track sub">
+      <ul class="splide__list" id="mythumbnail">
+
+      </ul>
+    </div>
+  </section>
+</body>
+</html>
