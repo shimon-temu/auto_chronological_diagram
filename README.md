@@ -1,5 +1,5 @@
 # Auto Chronological Diagram
-Auto Chronological Diagramは
+Auto Chronological Diagramは、
 好きなストーリー作品のデータを相関図で整理したい、
 漫画やドラマなどの物語をより深く知りたい人向けの
 データ整理支援ツールである。
